@@ -81,9 +81,9 @@ for i in range (numeroRecursos):
     listaCapacidad.append(cantidad)
 
 #Imprimir instancias de ejemplo
-print ("Lista de los tiempos:")
+print ("Lista de los tiempos de duracion para cada actividad:")
 print (listaTiempos)
-print ("Lista de los numeros de los recursos: ")
+print ("Lista de los cantidad maxima de los recursos para cada recurso: ")
 print (listaCapacidad)
 
 #Crear matriz para asignar recursos a actividades
@@ -115,7 +115,7 @@ with open ("recursos.csv","w",newline = "") as archivo:
 
 #*******************************************************************
 #Exportar precedencias csv
-with open ("predencias.csv","w",newline="") as archivo: 
+with open ("precedencias.csv","w",newline="") as archivo: 
     escritor = csv.writer(archivo)
 
     escritor.writerow(["Actividad","Precedencia"])
