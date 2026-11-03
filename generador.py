@@ -97,7 +97,7 @@ matrizDRJ = [
 #Exportar datos a csv (actividades y tiempo)
 with open ("actividades.csv", "w",newline = "") as archivo:
     escritor = csv.writer(archivo)
-
+    escritor.writerow([f"Numero de actividades: {numeroActividades}"])
     escritor.writerow(["Numero_actividad","duracion_actividad"])
 
     for i in range (numeroActividades):
@@ -107,7 +107,7 @@ with open ("actividades.csv", "w",newline = "") as archivo:
 #Exportar datos csv (recursos y cantidad)
 with open ("recursos.csv","w",newline = "") as archivo:
     escritor = csv.writer(archivo)
-
+    escritor.writerow([f"Numero de actividades: {numeroRecursos}"])
     escritor.writerow(["Numero_recurso","cantidad_recurso"])
 
     for i in range (numeroRecursos):
