@@ -72,9 +72,16 @@ with open ("precedencias.csv","r",newline="") as archivo:
 #Llamar funcion serial que contiene la funcion greedy
 inicio,fin = serial.serialSGS(precedencias,actividades,recursos,matrizDrj)
 
-for actividad in sorted(inicio, key=lambda j: inicio[j]):
-    print(
-        f"Actividad {actividad}: "
-        f"Inicio = {inicio[actividad]}, "
-        f"Fin = {fin[actividad]}"
-    )
+with open ("resultados.csv","w",newline="") as archivo:
+
+    escritor = csv.writer(archivo)
+
+    solucion = sorted(inicio, key=lambda j: inicio[j])
+    escritor.writerow(solucion)
+
+    for actividad in sorted(inicio, key=lambda j: inicio[j]):
+        print(
+            f"Actividad {actividad}: "
+            f"Inicio = {inicio[actividad]}, "
+            f"Fin = {fin[actividad]}"
+        )
