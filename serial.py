@@ -93,4 +93,6 @@ def serialSGS(precedencias, actividades, recursos, matrizDrj):
     #Cuando se encuentre un inicio, final y recursos, agregar la actividad a las programadas
         programadas.append(actividad)
 
+    
+
     return inicio, fin

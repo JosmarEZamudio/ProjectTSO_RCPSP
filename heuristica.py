@@ -38,10 +38,6 @@ with open ("recursos.csv","r",newline="") as archivo:
 matrizDrj = [[0 for j in range(numeroActividades)]
         for i in range(numeroRecursos)]
 
-#for i in range (numeroRecursos):
-   # for j in range (numeroActividades):
- #       print(matrizDrj[i][j], end="")
-  #  print()
 #***********************************************
 #3-Cargar matriz drj (actividad recursos)
 with open ("actividadRecurso.csv","r",newline="") as archivo:
